@@ -12,23 +12,37 @@ body {
   width: 30vw;
   float: right;
   position: relative;
-  bottom: 18rem;
-  right: 6rem;
+  bottom: 10rem;
 }
 .mainHeading {
-  font-size: 3rem;
-  margin-bottom: 1rem;
+  font-size: 2.5rem;
+
   /* text-align: left; */
   color: blue;
   width: 50vw;
   margin-left: 5rem;
   margin-top: 3rem;
+  position: relative;
+  top: 6rem;
 }
 .form {
   position: relative;
-  bottom: 15rem;
+  bottom: 8rem;
 }
-
+/* .lang {
+  position: absolute;
+  top: 0rem;
+  right: 20rem;
+} */
+.lang {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  /* padding: 10px; 
+  background-color: #f0f0f0; 
+  border: 1px solid #ccc;
+  border-radius: 5px; */
+}
 h1 {
   font-size: 4rem;
   margin-bottom: 1rem;
@@ -54,8 +68,9 @@ h1 {
   max-width: 100%;
   color: inherit;
   text-align: left;
-  margin: 0 auto;
+
   margin-left: 20px;
+  margin-top: 7rem;
   padding: 10px;
   width: 90%;
   box-sizing: border-box;
@@ -154,6 +169,7 @@ output {
     align-items: center; */
   /* min-height: 100vh; */
   height: auto;
+  width: 100vw;
   padding-top: 2rem;
   /* padding-bottom: 4rem; */
 }
@@ -189,10 +205,41 @@ main {
   background-color: #1d1d1d;
 }
 
+@media only screen and (max-width: 768px) {
+  .mainImg {
+    width: 40vw;
+    position: relative;
+    bottom: 20rem;
+    right: 6rem;
+  }
+  .mainHeading {
+    font-size: 1.6rem;
+
+    /* text-align: left; */
+    color: blue;
+    width: 80vw;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 5rem;
+  }
+  .form {
+    position: relative;
+    bottom: 4rem;
+  }
+  .result {
+    max-width: 100%;
+    padding: 10px;
+
+    box-sizing: border-box;
+    position: relative;
+    bottom: 10rem;
+  }
+}
 @media only screen and (min-width: 600px) {
   input[type="text"] {
     width: 60%;
   }
+
   .result {
     max-width: 100%;
     padding: 10px;

@@ -8,7 +8,14 @@
       type="text/css"
       href="{{ url_for('static', filename='css/style.css') }}"
     />
+
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="http://translate.google.com/translate_a/element.js?cb=loadGoogleTranslate"></script>
+    <script>
+      function loadGoogleTranslate() {
+        new google.translate.TranslateElement("myid");
+      }
+    </script>
     <script>
       tailwind.config = {
         theme: {
@@ -25,11 +32,15 @@
     <title>Domain Defender</title>
     <meta
       name="description"
-      content="SafeSurf is a phishing domain detection tool created by abhizaik. This allows you to safely view the website without visiting it."
+      content="Defending Your Clicks, Exposing Phishing Threats, Keeping You Safe Online."
     />
-    <meta name="og:title" property="og:title" content="SafeSurf by abhizaik" />
-    <meta name="keywords" content="SafeSurf, phishing, abhizaik" />
-    <meta name="author" content="Abhishek K P" />
+    <meta
+      name="og:title"
+      property="og:title"
+      content="ClickSecure by HackstreetBoyssss"
+    />
+    <meta name="keywords" content="ClickSecure, phishing, HackstreetBoyssss" />
+    <meta name="author" content="HackstreetBoyssss" />
     <meta name="robots" content="index, follow" />
 
     <link rel="icon" href="{{ url_for('static', filename='favicon.ico') }}" />

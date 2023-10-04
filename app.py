@@ -23,7 +23,6 @@ def home():
 
     return render_template('index.html', output=output)
 
-
 @app.route('/preview', methods=['POST'])
 def preview():
     try:
