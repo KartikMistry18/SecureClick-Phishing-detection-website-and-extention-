@@ -1,0 +1,32 @@
+body {
+    width: 200px;
+    height: 200px;
+    padding: 10px;
+    font-family: Arial, sans-serif;
+}
+
+.popup-container {
+    text-align: center;
+}
+
+h2 {
+    font-size: 18px;
+    color: #333;
+}
+
+#result {
+    font-size: 16px;
+    color: #777;
+}
+
+button {
+    padding: 5px 10px;
+    background-color: #0078d4;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #005aa0;
+}
