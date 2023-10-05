@@ -10,7 +10,7 @@
     <nav class="bg-white border-gray-200 dark:bg-gray-900">
         <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
           <a href="/" class="flex m-auto items-center">
-              <img src="../static/logo.gif" class="h-24 mr-3" alt=" Logo" />
+              <img src="../static/logo2.gif" class="h-24 mr-3" alt=" Logo" />
               <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">ClickSecure</span>
           </a>
         
@@ -34,7 +34,7 @@
             <input type="text" name="url" placeholder="URL" required="required" />
             <button type="submit" class="btn" onclick="showLoadingSpinner()">CHECK URL</button>
         </form>
-
+        <div id="myid" class="lang">Choose Language</div>
         {% if output != "NA" %}
         <div class="result">
 
@@ -45,13 +45,13 @@
             <strong>
 
                 {% if output.trust_score >= 0 and output.trust_score < 60 %}
-                <span style="color: red; font-size: 1.25rem">Trust Score : {{output.trust_score}} / 100</span>
+                <span style="color: red; font-size: 1.25rem">Trust Score : {{output.trust_score}} / 100 <br> Website is <strong>not safe</strong> </span>
                 {% elif output.trust_score >= 60 and output.trust_score < 70 %}
-                <span style="color: orange; font-size: 1.25rem">Trust Score : {{output.trust_score}} / 100</span>
+                <span style="color: orange; font-size: 1.25rem">Trust Score : {{output.trust_score}} / 100 <br> website may be <strong>suspicious</strong></span>
                 {% elif output.trust_score >= 70 and output.trust_score < 90 %}
-                <span style="color: yellowgreen; font-size: 1.25rem">Trust Score : {{output.trust_score}} / 100</span>
+                <span style="color: yellowgreen; font-size: 1.25rem">Trust Score : {{output.trust_score}} / 100 <br> website is likely <strong>Secure</strong></span>
                 {% else %}
-                <span style="color: green; font-size: 1.25rem">Trust Score : {{output.trust_score}} / 100</span>
+                <span style="color: green; font-size: 1.25rem">Trust Score : {{output.trust_score}} / 100 <br> website is <strong>secure</strong></span>
                 {% endif %} 
 
             </strong>
@@ -73,7 +73,7 @@
             <form id="preview" class="preview-form" action="{{ url_for('preview')}}" method="POST" target="_blank">
                 <input type="hidden" name="url" value="{{output.url}}">
             </form>
-            <div id="myid" class="lang">Choose Language</div>
+            
             <button class = "preview-button" onclick="document.getElementById('preview').submit()">Preview URL within SafeSurf</button>
 
             
