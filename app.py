@@ -11,9 +11,25 @@ import model
 app = Flask(__name__)
 
 
-@app.route('/',  methods=['GET','POST'])
+@app.route('/')
 def home():
+
+    return render_template('index.html')
+
+# @app.route('/',  methods=['GET','POST'])
+# def home():
     
+#     try:
+#         url = request.form['url']
+#         result = controller.main(url)
+#         output = result
+#     except:
+#         output = 'NA'
+
+#     return render_template('index.html', output=output)
+
+@app.route('/about' ,  methods=['GET','POST'])
+def about(): 
     try:
         url = request.form['url']
         result = controller.main(url)
@@ -21,7 +37,8 @@ def home():
     except:
         output = 'NA'
 
-    return render_template('index.html', output=output)
+    return render_template('about.html', output=output)
+
 
 @app.route('/preview', methods=['POST'])
 def preview():
