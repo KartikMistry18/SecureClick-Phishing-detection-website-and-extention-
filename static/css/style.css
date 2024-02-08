@@ -301,9 +301,9 @@ main {
   /*Color mode HSL(hue, saturation, lightness)*/
   --hue: 152;
   --first-color: #003366;
-  --first-color-alt: hsl(var(--hue), 24%, 28%);
-  --first-color-light: hsl(var(--hue), 24%, 66%);
-  --first-color-lighten: hsl(var(--hue), 24%, 92%);
+  --first-color-alt: #25daff;
+  --first-color-light: hsl(186, 78%, 83%);
+  --first-color-lighten: hsl(186, 78%, 83%);
   --title-color: hsl(var(--hue), 4%, 15%);
   --text-color: hsl(var(--hue), 4%, 35%);
   --text-color-light: hsl(var(--hue), 4%, 55%);
@@ -421,8 +421,11 @@ body.dark-theme{
 
 .nav__btns{
   display: inline-flex;
-  align-items: center;
+  align-items: start;
   column-gap: 1rem;
+  position: relative;
+  right: 30rem;
+  bottom: 1rem;
 }
 
 /*========== 
@@ -501,6 +504,8 @@ the website, in dark theme
 
 .nav__logo{
   text-transform: uppercase;
+  position: relative;
+  top: 1.4rem;
   font-weight: 700;
   letter-spacing: -1px;
   display: inline-flex;
@@ -511,6 +516,8 @@ the website, in dark theme
 
 .nav__logo-icon{
   font-size: 1.15rem;
+  position: relative;
+  top: 10rem;
   color: var(--first-color);
 }
 
@@ -849,7 +856,7 @@ the website, in dark theme
 
 .questions__container{
   gap: 1.5rem;
-  padding: 1.5rem 0;
+  padding: 1.5rem 1.5rem;
 }
 
 .questions__group{
@@ -1252,7 +1259,7 @@ the website, in dark theme
   }
 
   .section{
-    padding: 8rem 0 1rem;
+    padding: 8rem 1rem 1rem;
   }
   .section__title,
   .section__title-center{
