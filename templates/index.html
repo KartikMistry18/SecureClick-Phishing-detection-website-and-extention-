@@ -9,6 +9,7 @@
 
         <!--=============== REMIX ICONS ===============-->
         <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+         <link rel="icon" href="{{ url_for('static', filename='favicon.ico') }}" />
 
         <!--=============== CSS ===============-->
         <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
@@ -29,11 +30,9 @@
                             <a href="#home" class="nav__link active-link">Home</a>
                         </li>
                         <li class="nav__item">
-                            <a href="{{ url_for('about') }}" class="nav__link">About</a>
+                            <a href="{{ url_for('about') }}" class="nav__link">Detect</a>
                         </li>
-                        <li class="nav__item">
-                            <a href="#products" class="nav__link">Products</a>
-                        </li>
+                        
                     </ul>
 
                     <div class="nav__close" id="nav-close">
@@ -66,8 +65,8 @@
                             Create incredible plant design for your offices or apastaments. 
                             Add fresness to your new ideas.
                         </p>
-                        <a href="#about" class="button button--flex">
-                            Explore <i class="ri-arrow-right-down-line button__icon"></i>
+                        <a href="{{ url_for('about') }}" class="button button--flex">
+                            Detect <i class="ri-arrow-right-down-line button__icon"></i>
                         </a>
                     </div>
 
@@ -92,39 +91,38 @@
             <!--==================== ABOUT ====================-->
             <section class="about section container" id="about">
                 <div class="about__container grid">
-                    <img src="../static/img/about.png" alt="" class="about__img">
+                    <img src="../static/img/phishingUpdated.gif" alt="" class="about__img">
 
                     <div class="about__data">
                         <h2 class="section__title about__title">
-                            Who we really are & <br> why choose us
+                            What is Phishing & <br> Why use this system
                         </h2>
 
                         <p class="about__description">
-                            We have over 4000+ unbiased reviews and our customers 
-                            trust our plant process and delivery service every time
+                            “Phishing” refers to an attempt to steal sensitive information, typically in the form of usernames, passwords, credit card numbers, bank account information or other important data in order to utilize or sell the stolen information.
                         </p>
 
                         <div class="about__details">
                             <p class="about__details-description">
                                 <i class="ri-checkbox-fill about__details-icon"></i>
-                                We always deliver on time.
+                                User-friendly Interface.
                             </p>
                             <p class="about__details-description">
                                 <i class="ri-checkbox-fill about__details-icon"></i>
-                                We give you guides to protect and care for your plants.
+                                one-click Detection.
                             </p>
                             <p class="about__details-description">
                                 <i class="ri-checkbox-fill about__details-icon"></i>
-                                We always come over for a check-up after sale.
+                                Shows Detailed information about the website.
                             </p>
                             <p class="about__details-description">
                                 <i class="ri-checkbox-fill about__details-icon"></i>
-                                100% money back guaranteed.
+                                Completely free to use.
                             </p>
                         </div>
 
-                        <a href="#" class="button--link button--flex">
-                            Shop Now <i class="ri-arrow-right-down-line button__icon"></i>
+                        <a href="{{ url_for('about') }}" class="button--link button--flex">
+                            Detect Now <i class="ri-arrow-right-down-line button__icon"></i>
                         </a>
                     </div>
                 </div>
@@ -134,51 +132,39 @@
             <section class="steps section container">
                 <div class="steps__bg">
                     <h2 class="section__title-center steps__title">
-                        Steps to start your <br> plants off right
+                        Steps to Detect your <br> Phishing website
                     </h2>
 
                     <div class="steps__container grid">
                         <div class="steps__card">
                             <div class="steps__card-number">01</div>
-                            <h3 class="steps__card-title">Choose Plant</h3>
+                            <h3 class="steps__card-title">copy the link of the website</h3>
                             <p class="steps__card-description">
-                                We have several varieties plants you can choose from.
+                                Copy the link of the website you want to check for phishing
                             </p>
                         </div>
 
                         <div class="steps__card">
                             <div class="steps__card-number">02</div>
-                            <h3 class="steps__card-title">Place an order</h3>
+                            <h3 class="steps__card-title">click on check url button</h3>
                             <p class="steps__card-description">
-                                Once your order is set, we move to the next step which is the shipping.
+                                Click on check url button to check the website through the url that is taken as input from step 1
                             </p>
                         </div>
 
                         <div class="steps__card">
                             <div class="steps__card-number">03</div>
-                            <h3 class="steps__card-title">Get plants delivered</h3>
+                            <h3 class="steps__card-title">you will get detailed info about the website</h3>
                             <p class="steps__card-description">
-                                Our delivery process is easy, you receive the plant direct to your door.
+                                you will get detailed information about the website including a preview option and its source code
                             </p>
                         </div>
                     </div>
                 </div>
             </section>
-
-            <!--==================== PRODUCTS ====================-->
-            <section class="product section container" id="products">
-                <h2 class="section__title-center">
-                    Check out our <br> products
-                </h2>
-
-                <p class="product__description">
-                    Here are some selected plants from our showroom, all are in excellent 
-                    shape and has a long life span. Buy and enjoy best quality.
-                </p>
-
-                
-            </section>
-
+<br>
+<br>
+<br>
             <!--==================== QUESTIONS ====================-->
             <section class="questions section" id="faqs">
                 <h2 class="section__title-center questions__title container">
@@ -191,14 +177,13 @@
                             <header class="questions__header">
                                 <i class="ri-add-line questions__icon"></i>
                                 <h3 class="questions__item-title">
-                                    My flowers are falling off or dying?
+                                    How accurate is the safety score provided by the system ?
                                 </h3>
                             </header>
 
                             <div class="questions__content">
                                 <p class="questions__description">
-                                    Plants are easy way to add color energy and transform your 
-                                    space but which planet is for you. Choosing the right plant.
+                                    The system employs advanced algorithms to analyze website URLs, offering a reliable safety score based on extensive phishing detection mechanisms.
                                 </p>
                             </div>
                         </div>
@@ -207,14 +192,13 @@
                             <header class="questions__header">
                                 <i class="ri-add-line questions__icon"></i>
                                 <h3 class="questions__item-title">
-                                    What causes leaves to become pale?
+                                    Can I trust the safety score provided by this system?
                                 </h3>
                             </header>
 
                             <div class="questions__content">
                                 <p class="questions__description">
-                                    Plants are easy way to add color energy and transform your 
-                                    space but which planet is for you. Choosing the right plant.
+                                    Yes, the system utilizes cutting-edge technologies and continuously updates its database to ensure accurate and trustworthy safety assessments of website URLs.
                                 </p>
                             </div>
                         </div>
@@ -223,14 +207,13 @@
                             <header class="questions__header">
                                 <i class="ri-add-line questions__icon"></i>
                                 <h3 class="questions__item-title">
-                                    What causes brown crispy leaves?
+                                    Does the system support multiple languages for user convenience?
                                 </h3>
                             </header>
 
                             <div class="questions__content">
                                 <p class="questions__description">
-                                    Plants are easy way to add color energy and transform your 
-                                    space but which planet is for you. Choosing the right plant.
+                                     Absolutely! Our system offers support for multiple languages, ensuring accessibility and ease of use for users around the globe.
                                 </p>
                             </div>
                         </div>
@@ -241,14 +224,13 @@
                             <header class="questions__header">
                                 <i class="ri-add-line questions__icon"></i>
                                 <h3 class="questions__item-title">
-                                    How do i choose a plant?
+                                    How does the system provide a preview of the webpage?
                                 </h3>
                             </header>
 
                             <div class="questions__content">
                                 <p class="questions__description">
-                                    Plants are easy way to add color energy and transform your 
-                                    space but which planet is for you. Choosing the right plant.
+                                    The system utilizes advanced web scraping techniques to fetch and display a preview of the webpage, giving users a glimpse of the content and layout before visiting the site directly.
                                 </p>
                             </div>
                         </div>
@@ -257,14 +239,13 @@
                             <header class="questions__header">
                                 <i class="ri-add-line questions__icon"></i>
                                 <h3 class="questions__item-title">
-                                    How do I change the pots?
+                                    Is the system user-friendly for individuals with limited technical knowledge?
                                 </h3>
                             </header>
 
                             <div class="questions__content">
                                 <p class="questions__description">
-                                    Plants are easy way to add color energy and transform your 
-                                    space but which planet is for you. Choosing the right plant.
+                                    Yes, the system is designed with user-friendliness in mind, featuring a simple interface where users can input URLs and quickly obtain safety scores, source code, and webpage previews without requiring technical expertise.
                                 </p>
                             </div>
                         </div>
@@ -273,14 +254,13 @@
                             <header class="questions__header">
                                 <i class="ri-add-line questions__icon"></i>
                                 <h3 class="questions__item-title">
-                                    Why are gnats flying around my plant?
+                                    Can the system detect sophisticated phishing attempts?
                                 </h3>
                             </header>
 
                             <div class="questions__content">
                                 <p class="questions__description">
-                                    Plants are easy way to add color energy and transform your 
-                                    space but which planet is for you. Choosing the right plant.
+                                     Yes, the system is equipped with advanced algorithms capable of detecting even sophisticated phishing attempts by analyzing various indicators such as URL structure, content similarity, and behavioral patterns.
                                 </p>
                             </div>
                         </div>
@@ -289,127 +269,12 @@
             </section>
 
             <!--==================== CONTACT ====================-->
-            <section class="contact section container" id="contact">                
-                <div class="contact__container grid">
-                    <div class="contact__box">
-                        <h2 class="section__title">
-                            Reach out to us today <br> via any of the given <br> information
-                        </h2>
-
-                        <div class="contact__data">
-                            <div class="contact__information">
-                                <h3 class="contact__subtitle">Call us for instant support</h3>
-                                <span class="contact__description">
-                                    <i class="ri-phone-line contact__icon"></i>
-                                    +999 888 777
-                                </span>
-                            </div>
-
-                            <div class="contact__information">
-                                <h3 class="contact__subtitle">Write us by mail</h3>
-                                <span class="contact__description">
-                                    <i class="ri-mail-line contact__icon"></i>
-                                    user@email.com
-                                </span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <form action="" class="contact__form">
-                        <div class="contact__inputs">
-                            <div class="contact__content">
-                                <input type="email" placeholder=" " class="contact__input">
-                                <label for="" class="contact__label">Email</label>
-                            </div>
-
-                            <div class="contact__content">
-                                <input type="text" placeholder=" " class="contact__input">
-                                <label for="" class="contact__label">Subject</label>
-                            </div>
-
-                            <div class="contact__content contact__area">
-                                <textarea name="message" placeholder=" " class="contact__input"></textarea>                              
-                                <label for="" class="contact__label">Message</label>
-                            </div>
-                        </div>
-
-                        <button class="button button--flex">
-                            Send Message
-                            <i class="ri-arrow-right-up-line button__icon"></i>
-                        </button>
-                    </form>
-                </div>
-            </section>
+          <br>
+          <br>
         </main>
 
         <!--==================== FOOTER ====================-->
-        <footer class="footer section">
-            <div class="footer__container container grid">
-                <div class="footer__content">
-                    <a href="#" class="footer__logo">
-                        <i class="ri-leaf-line footer__logo-icon"></i> Plantex
-                    </a>
-
-                    <h3 class="footer__title">
-                        Subscribe to our newsletter <br> to stay update
-                    </h3>
-
-                    <div class="footer__subscribe">
-                        <input type="email" placeholder="Enter your email" class="footer__input">
-
-                        <button class="button button--flex footer__button">
-                            Subscribe
-                            <i class="ri-arrow-right-up-line button__icon"></i>
-                        </button>
-                    </div>
-                </div>
-
-                <div class="footer__content">
-                    <h3 class="footer__title">Our Address</h3>
-
-                    <ul class="footer__data">
-                        <li class="footer__information">1234 - Peru</li>
-                        <li class="footer__information">La Libertad - 43210</li>
-                        <li class="footer__information">123-456-789</li>
-                    </ul>
-                </div>
-
-                <div class="footer__content">
-                    <h3 class="footer__title">Contact Us</h3>
-
-                    <ul class="footer__data">
-                        <li class="footer__information">+999 888 777</li>
-                        
-                        <div class="footer__social">
-                            <a href="https://www.facebook.com/" class="footer__social-link">
-                                <i class="ri-facebook-fill"></i>
-                            </a>
-                            <a href="https://www.instagram.com/" class="footer__social-link">
-                                <i class="ri-instagram-line"></i>
-                            </a>
-                            <a href="https://twitter.com/" class="footer__social-link">
-                                <i class="ri-twitter-fill"></i>
-                            </a>
-                        </div>
-                    </ul>
-                </div>
-
-                <div class="footer__content">
-                    <h3 class="footer__title">
-                        We accept all credit cards
-                    </h3>
-
-                    <div class="footer__cards">
-                        <img src="../static/img/card1.png" alt="" class="footer__card">
-                        <img src="../static/img/card2.png" alt="" class="footer__card">
-                        <img src="../static/img/card3.png" alt="" class="footer__card">
-                        <img src="../static/img/card4.png" alt="" class="footer__card">
-                    </div>
-                </div>
-            </div>
-
-            <p class="footer__copy">&#169; Bedimcode. All rigths reserved</p>
-        </footer>
+        
         
         <!--=============== SCROLL UP ===============-->
         <a href="#" class="scrollup" id="scroll-up"> 
