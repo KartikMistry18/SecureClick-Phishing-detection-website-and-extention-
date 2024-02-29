@@ -29,8 +29,15 @@ pip install -r requirements.txt
 ```
 python app.py
 ```
+
+<h2>Project Demo images 💻</h2>
+
 ![image info](./demo%20images/secureclick%201.png)
-![image info](./demo%20images/secureclick%201.png)
+![image info](./demo%20images/secureclick%202.png)
+![image info](./demo%20images/secureclick%203.png)
+![image info](./demo%20images/secureclick%204.png)
+![image info](./demo%20images/secureclick%205.png)
+![image info](./demo%20images/secureclick%206.png)
   
   
 <h2>💻 Built with</h2>
