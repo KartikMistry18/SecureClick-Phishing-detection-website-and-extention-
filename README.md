@@ -32,7 +32,7 @@ python app.py
 
 <h2>Project Demo images 💻</h2>
 
-![image info](./demo%20images/secureclick%201.png)
+![image info](./demo%20images/home.png)
 ![image info](./demo%20images/secureclick%202.png)
 ![image info](./demo%20images/secureclick%203.png)
 ![image info](./demo%20images/secureclick%204.png)
