@@ -18,51 +18,51 @@ from sklearn.linear_model import LogisticRegression
 from sklearn.metrics import accuracy_score
 from sklearn.preprocessing import StandardScaler
 
-class DataPreprocessor:
-    def __init__(self):
-        # Initialize any preprocessing steps here
-        self.preprocessor = StandardScaler()  # Replace with your actual preprocessing
+# class DataPreprocessor:
+#     def __init__(self):
+#         # Initialize any preprocessing steps here
+#         self.preprocessor = StandardScaler()  # Replace with your actual preprocessing
 
-    def preprocess(self, data):
-        # Implement your data preprocessing steps here
-        preprocessed_data = self.preprocessor.transform(data)  # Replace with your actual preprocessing
-        return preprocessed_data
+#     def preprocess(self, data):
+#         # Implement your data preprocessing steps here
+#         preprocessed_data = self.preprocessor.transform(data)  # Replace with your actual preprocessing
+#         return preprocessed_data
 
-def load_and_predict_from_url(url):
-    # Load the ensemble model from model.pkl
-    try:
-        model = joblib.load("modelmain.pkl")
-    except FileNotFoundError:
-        return "Model file not found."
+# def load_and_predict_from_url(url):
+#     # Load the ensemble model from model.pkl
+#     try:
+#         model = joblib.load("modelmain.pkl")
+#     except FileNotFoundError:
+#         return "Model file not found."
 
-    # Fetch data from the provided URL
-    try:
-        response = requests.get(url)
-        data = response.json()  # Assuming the URL returns JSON data, adjust as needed
-    except Exception as e:
-        return f"Error fetching data from URL: {str(e)}"
+#     # Fetch data from the provided URL
+#     try:
+#         response = requests.get(url)
+#         data = response.json()  # Assuming the URL returns JSON data, adjust as needed
+#     except Exception as e:
+#         return f"Error fetching data from URL: {str(e)}"
 
-    # Initialize a data preprocessor (you may need to customize this class)
-    data_preprocessor = DataPreprocessor()
+#     # Initialize a data preprocessor (you may need to customize this class)
+#     data_preprocessor = DataPreprocessor()
 
-    # Preprocess the data
-    preprocessed_data = data_preprocessor.preprocess(data)
+#     # Preprocess the data
+#     preprocessed_data = data_preprocessor.preprocess(data)
 
-    # Make predictions using the loaded model
-    try:
-        prediction_score = model.predict_proba(preprocessed_data)[:, 1]  # Probability of being phishing
-        prediction = (prediction_score > 0.5).astype(int)  # Convert to binary prediction (0 or 1)
-        return {"prediction": prediction, "prediction_score": prediction_score}
-    except Exception as e:
-        return f"Prediction error: {str(e)}"
+#     # Make predictions using the loaded model
+#     try:
+#         prediction_score = model.predict_proba(preprocessed_data)[:, 1]  # Probability of being phishing
+#         prediction = (prediction_score > 0.5).astype(int)  # Convert to binary prediction (0 or 1)
+#         return {"prediction": prediction, "prediction_score": prediction_score}
+#     except Exception as e:
+#         return f"Prediction error: {str(e)}"
 
-# Example usage:
-if __name__ == "__main__":
-    # Replace 'your_url_here' with the actual URL from which you want to fetch data.
-    input_url = 'your_url_here'
-    result = load_and_predict_from_url(input_url)
-    print("Phishing Prediction:", result["prediction"])
-    print("Prediction Score:", result["prediction_score"])
+# # Example usage:
+# if __name__ == "__main__":
+#     # Replace 'your_url_here' with the actual URL from which you want to fetch data.
+#     input_url = 'your_url_here'
+#     result = load_and_predict_from_url(input_url)
+#     print("Phishing Prediction:", result["prediction"])
+#     print("Prediction Score:", result["prediction_score"])
 
 
 global BASE_SCORE
